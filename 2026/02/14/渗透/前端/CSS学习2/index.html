@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>CSS学习2 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="选择器3结构伪类选择器作用：根据元素的结构关系查找元素    选择器     E:first-child 查找第一个E元素   E:last-child 查找最后一个E元素   E:nth-child(N) 查找第N个E元素（第一个元素N值为1）   123li:first-child&#123; background-color:red;&#125;  :nth-child(公式)作用：根据元素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS学习2">
+<meta property="og:url" content="http://example.com/2026/02/14/%E6%B8%97%E9%80%8F/%E5%89%8D%E7%AB%AF/CSS%E5%AD%A6%E4%B9%A02/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="选择器3结构伪类选择器作用：根据元素的结构关系查找元素    选择器     E:first-child 查找第一个E元素   E:last-child 查找最后一个E元素   E:nth-child(N) 查找第N个E元素（第一个元素N值为1）   123li:first-child&#123; background-color:red;&#125;  :nth-child(公式)作用：根据元素">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/padding.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/flex%E7%BB%84%E6%88%90.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/flex%E5%8A%9F%E8%83%BD.png">
+<meta property="article:published_time" content="2026-02-14T15:17:00.000Z">
+<meta property="article:modified_time" content="2026-02-14T15:17:37.448Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-渗透/前端/CSS学习2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/02/14/%E6%B8%97%E9%80%8F/%E5%89%8D%E7%AB%AF/CSS%E5%AD%A6%E4%B9%A02/" class="article-date">
+  <time class="dt-published" datetime="2026-02-14T15:17:00.000Z" itemprop="datePublished">2026-02-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      CSS学习2
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="选择器3"><a href="#选择器3" class="headerlink" title="选择器3"></a>选择器3</h2><h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3><p>作用：根据元素的结构关系查找元素</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E:first-child</td>
+<td>查找第一个E元素</td>
+</tr>
+<tr>
+<td>E:last-child</td>
+<td>查找最后一个E元素</td>
+</tr>
+<tr>
+<td>E:nth-child(N)</td>
+<td>查找第N个E元素（第一个元素N值为1）</td>
+</tr>
+</tbody></table>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:first-child</span>&#123;</span><br><span class="line"> <span class="attribute">background-color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="nth-child-公式"><a href="#nth-child-公式" class="headerlink" title=":nth-child(公式)"></a>:nth-child(公式)</h4><p>作用：根据元素的结构关系查找多个元素</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>偶数</td>
+<td>2n</td>
+</tr>
+<tr>
+<td>奇数</td>
+<td>2n+1;2n-1</td>
+</tr>
+<tr>
+<td>5的倍数</td>
+<td>5n</td>
+</tr>
+<tr>
+<td>第5个以后的</td>
+<td>n+5</td>
+</tr>
+<tr>
+<td>第5个之前的</td>
+<td>-n+5</td>
+</tr>
+</tbody></table>
+<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><p>作用：创建虚拟元素（伪元素），用来摆放装饰性的内容</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E::before</td>
+<td>在E元素里面最前面添加一个伪元素</td>
+</tr>
+<tr>
+<td>E::after</td>
+<td>在E元素里面最后面添加一个伪元素</td>
+</tr>
+</tbody></table>
+<p>注意点：</p>
+<ul>
+<li>必须设置<strong>content:” “属性</strong>，用来设置伪元素的内容，<strong>如果没有内容，则引号留空即可</strong></li>
+<li>伪元素默认行内显示模式</li>
+<li>权重和标签选择器相同</li>
+</ul>
+<h3 id="PxCook"><a href="#PxCook" class="headerlink" title="PxCook"></a>PxCook</h3><p>PxCook(像素大厨)是一款切图设计工具软件。支持PSD文件的文字，颜色，距离自动智能识别</p>
+<ul>
+<li>开发面板（自动智能识别）</li>
+<li>设计面板（手动测量尺寸和颜色）</li>
+</ul>
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><h3 id="盒子模型-组成"><a href="#盒子模型-组成" class="headerlink" title="盒子模型-组成"></a>盒子模型-组成</h3><p>作用：布局网页，摆放盒子和内容</p>
+<p>盒子模型重要组成部分：</p>
+<ul>
+<li>内容区域：width&amp;height</li>
+<li>内边距：padding（出现在内容与盒子边缘之间）</li>
+<li>边框线：border</li>
+<li>外边距：margin（出现在盒子外面）</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png" alt="盒子模型基本图示"></p>
+<h3 id="盒子模型-边框线"><a href="#盒子模型-边框线" class="headerlink" title="盒子模型-边框线"></a>盒子模型-边框线</h3><ul>
+<li><p>属性名：border（bd）</p>
+</li>
+<li><p>属性值：边框线粗细  线条样式 颜色 （不区分顺序）</p>
+</li>
+<li><p>常用线条样式</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>线条样式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>solid</td>
+<td>实线</td>
+</tr>
+<tr>
+<td>dashed</td>
+<td>虚线</td>
+</tr>
+<tr>
+<td>dotted</td>
+<td>点线</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>设置单方向边框线</p>
+<ul>
+<li>属性名：border-方位名词（bd+方位名词首字母，例如bdb（下实线））</li>
+<li>属性值：边框线粗细  线条样式  颜色（不区分顺序）</li>
+</ul>
+</li>
+</ul>
+<h3 id="盒子模型-内边距"><a href="#盒子模型-内边距" class="headerlink" title="盒子模型-内边距"></a>盒子模型-内边距</h3><p>作用：设置内容与盒子边缘之间的距离</p>
+<p>属性名：padding&#x2F; padding-方位名词</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line"> <span class="comment">/*四个方向 内边距相同*/</span></span><br><span class="line"> <span class="attribute">padding</span>:<span class="number">30px</span>；</span><br><span class="line"> </span><br><span class="line"> <span class="comment">/*单独设置一个方向的内边距*/</span></span><br><span class="line"> padding-top:<span class="number">10px</span>;</span><br><span class="line"> <span class="attribute">padding-right</span>:<span class="number">20px</span>;</span><br><span class="line"> <span class="attribute">padding-bottom</span>:<span class="number">40px</span>;</span><br><span class="line"> <span class="attribute">padding-left</span>:<span class="number">80px</span>;</span><br><span class="line"> </span><br><span class="line"> <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line"> <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line"> <span class="attribute">background-color</span>:pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="padding多值写法"><a href="#padding多值写法" class="headerlink" title="padding多值写法"></a>padding多值写法</h4><p>四个值顺时针方向设置</p>
+<p>三个值上 左右 下</p>
+<p>两个值上下 左右</p>
+<p>一个值四边距相同</p>
+<p><img src="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/padding.png"></p>
+<h3 id="盒子模型-尺寸计算"><a href="#盒子模型-尺寸计算" class="headerlink" title="盒子模型-尺寸计算"></a>盒子模型-尺寸计算</h3><ul>
+<li><p>默认情况</p>
+<p>盒子尺寸&#x3D;内容尺寸+border尺寸+内边距尺寸</p>
+</li>
+<li><p>结论</p>
+<p>给盒子加border&#x2F;padding会撑大盒子</p>
+</li>
+<li><p>解决</p>
+<ul>
+<li>手动做减法，减border&#x2F;padding的尺寸</li>
+<li>内减模式：box-sizing：border-box</li>
+</ul>
+</li>
+</ul>
+<h3 id="盒子模型-外边距"><a href="#盒子模型-外边距" class="headerlink" title="盒子模型-外边距"></a>盒子模型-外边距</h3><ul>
+<li>作用：拉开两个盒子之间的距离</li>
+<li>属性名：margin</li>
+<li>提示：与padding属性值写法、含义相同</li>
+<li>版心居中效果：<strong>margin：上下边距  auto</strong></li>
+<li>版心居中要求：盒子必须设置有宽度</li>
+</ul>
+<h4 id="外边距合并现象"><a href="#外边距合并现象" class="headerlink" title="外边距合并现象"></a>外边距合并现象</h4><ul>
+<li>场景：垂直排列的兄弟元素，上下margin会合并</li>
+<li>现象：取两个margin中的较大值生效</li>
+</ul>
+<h4 id="外边距塌陷问题"><a href="#外边距塌陷问题" class="headerlink" title="外边距塌陷问题"></a>外边距塌陷问题</h4><ul>
+<li>场景：父子级的标签，子级添加上边距</li>
+<li>现象：导致父级一起向下移动</li>
+<li>解决方法：<ul>
+<li>取消子级的margin属性，父级设置padding属性</li>
+<li>父级设置 overflow:hidden</li>
+<li>父级设置border-top属性</li>
+</ul>
+</li>
+</ul>
+<h4 id="行内元素-内外边距问题"><a href="#行内元素-内外边距问题" class="headerlink" title="行内元素-内外边距问题"></a>行内元素-内外边距问题</h4><ul>
+<li>场景：行内元素添加margin和padding，无法改变元素垂直位置</li>
+<li>解决方法：给行内元素添加line-height可以改变垂直位置</li>
+</ul>
+<h3 id="盒子模型-元素"><a href="#盒子模型-元素" class="headerlink" title="盒子模型-元素"></a>盒子模型-元素</h3><ul>
+<li><p>作用：控制溢出元素的内容的显示方式</p>
+</li>
+<li><p>属性名：overflow</p>
+</li>
+<li><p>属性值：</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hidden</td>
+<td>溢出隐藏</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>溢出滚动（无论是否溢出，都显示滚动条位置）</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>溢出滚动（溢出才显示滚动条位置）</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="盒子模型-圆角效果"><a href="#盒子模型-圆角效果" class="headerlink" title="盒子模型-圆角效果"></a>盒子模型-圆角效果</h3><ul>
+<li>作用：设置元素外边框为圆角</li>
+<li>属性名：border-radius</li>
+<li>属性值：数字+px &#x2F;百分比（百分比最大为50%，超过50%没有效果）</li>
+<li>提示：<ul>
+<li>属性值是圆角半径</li>
+<li>如果圆角属性有多个取值，则从左上角顺时针取值，没有取值的角与对角取值相同</li>
+</ul>
+</li>
+<li>常见应用<ul>
+<li>正圆<ul>
+<li>给正方形盒子设置圆角属性值为 <strong>宽高的一半&#x2F;50%</strong></li>
+</ul>
+</li>
+<li>胶囊形状<ul>
+<li>给长方形盒子设置圆角属性值为 <strong>盒子高度的一半</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="盒子模型-阴影"><a href="#盒子模型-阴影" class="headerlink" title="盒子模型-阴影"></a>盒子模型-阴影</h3><ul>
+<li>作用：给元素设置阴影效果</li>
+<li>属性名：box-shadow</li>
+<li>属性值： X轴偏移量 Y轴偏移量  模糊半径  扩散半径  颜色 内外阴影</li>
+<li>注意<ul>
+<li>X轴偏移量和Y轴偏移量必须书写</li>
+<li>默认为外阴影，<strong>内阴影需要添加 inset</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="标准流"><a href="#标准流" class="headerlink" title="标准流"></a>标准流</h2><p>标准流也叫文档流，指的是标签在页面中默认的排布规则，例如：块元素独占一行，行内元素独占一行，行内元素可以一行显示多个</p>
+<h2 id="浮动属性"><a href="#浮动属性" class="headerlink" title="浮动属性"></a>浮动属性</h2><ul>
+<li>作用：让块级元素水平排列</li>
+<li>属性名：float</li>
+<li>属性值<ul>
+<li>left：左对齐</li>
+<li>right：右对齐</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>顶部对齐</li>
+<li>具备行内块显示模式特点</li>
+<li>盒子脱标，不占用标准流盒子位置</li>
+</ul>
+</li>
+</ul>
+<h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><ul>
+<li><p>场景：浮动元素会脱标，如果父级没有高度，子级无法撑开父级高度（可能导致页面布局错乱）</p>
+</li>
+<li><p>解决方法：清除浮动带来的影响</p>
+<ul>
+<li><p>额外标签法</p>
+<ul>
+<li>在父级元素的最后添加一个块级元素，设置CSS属性 <strong>clear:both</strong>(元素类名习惯设置为clearfix)</li>
+</ul>
+</li>
+<li><p>单伪元素法</p>
+<ul>
+<li><p>给父级元素增添一个伪元素类名</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line"> <span class="attribute">content</span>:<span class="string">&quot; &quot;</span>;</span><br><span class="line"> <span class="attribute">display</span>:block;</span><br><span class="line"> <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>双伪元素法（推荐）</p>
+<ul>
+<li><p>给父级元素前后都添加伪元素设置为表格（table）显示模式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>, <span class="selector-class">.clear</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line"> <span class="attribute">content</span>:<span class="string">&quot; &quot;</span>;</span><br><span class="line"> <span class="attribute">display</span>:<span class="string">&quot;table&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line"> <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意：before伪元素解决外边距塌陷问题，after清除浮动</p>
+</li>
+</ul>
+</li>
+<li><p>overflow</p>
+<ul>
+<li>父元素添加CSS属性 <strong>overflow:hidden</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h2><p>Flex布局也叫弹性布局，是浏览器提倡的布局模型，非常适合结构化布局，提供了强大的空间分布和对齐能力。</p>
+<p>Flex布局不会产生浮动布局中脱标现象，布局网页更简单、更灵活。</p>
+<h3 id="Flex-组成"><a href="#Flex-组成" class="headerlink" title="Flex-组成"></a>Flex-组成</h3><ul>
+<li><p>设置方式：给父级元素设置 <strong>display:flex</strong> ，子元素可以自动挤压或拉伸</p>
+</li>
+<li><p>组成部分：</p>
+<ul>
+<li><p>弹性容器</p>
+</li>
+<li><p>弹性盒子</p>
+</li>
+<li><p>主轴：默认为水平方向</p>
+</li>
+<li><p>侧轴&#x2F;交叉轴：默认为垂直方向</p>
+<p><img src="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/flex%E7%BB%84%E6%88%90.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Flex功能"><a href="#Flex功能" class="headerlink" title="Flex功能"></a>Flex功能</h3><p><img src="https://cdn.jsdelivr.net/gh/AZHU-6315/images@main/flex%E5%8A%9F%E8%83%BD.png"></p>
+<h4 id="主轴对齐方式"><a href="#主轴对齐方式" class="headerlink" title="主轴对齐方式"></a>主轴对齐方式</h4><p>属性名：justify-content</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>默认值，弹性盒子从起点开始依次排列</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>弹性盒子从终点开始依次排列</td>
+</tr>
+<tr>
+<td>center</td>
+<td>弹性盒子沿主轴居中排列</td>
+</tr>
+<tr>
+<td>space-between</td>
+<td>弹性盒子沿主轴均匀排列，空白间距均匀分布在弹性盒子之间</td>
+</tr>
+<tr>
+<td>space-around</td>
+<td>弹性盒子沿主轴均匀排列，空白间距均匀分布在弹性盒子两侧</td>
+</tr>
+<tr>
+<td>space-evenly</td>
+<td>弹性盒子沿主轴均匀排列，弹性盒子与容器之间间距相等</td>
+</tr>
+</tbody></table>
+<h4 id="侧轴对齐方式"><a href="#侧轴对齐方式" class="headerlink" title="侧轴对齐方式"></a>侧轴对齐方式</h4><p>属性名</p>
+<ul>
+<li><p>align-items:当前弹性容器内所有弹性盒子的侧轴对齐方式（给<strong>弹性容器</strong>设置）</p>
+</li>
+<li><p>align-self: 单独控制某个弹性盒子的侧轴对齐方式（给<strong>弹性盒子</strong>控制）</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stretch</td>
+<td>弹性盒子沿着侧轴线被拉伸至填满容器（弹性盒子没有设置侧轴方向尺寸则默认拉伸）</td>
+</tr>
+<tr>
+<td>center</td>
+<td>弹性盒子沿侧轴居中排列</td>
+</tr>
+<tr>
+<td>flex-start</td>
+<td>弹性盒子从起点开始依次排列</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>弹性盒子从终点开始依次排列</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="修改主轴方向"><a href="#修改主轴方向" class="headerlink" title="修改主轴方向"></a>修改主轴方向</h4><p>主轴默认在水平方向，侧轴默认在垂直方向</p>
+<p>属性名：flex-direction</p>
+<p>属性值：</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>row</td>
+<td>水平方向，从左向右（默认）</td>
+</tr>
+<tr>
+<td><strong>column</strong></td>
+<td><strong>垂直方向，从上向下</strong></td>
+</tr>
+<tr>
+<td>row-reverse</td>
+<td>水平方向，从右向左</td>
+</tr>
+<tr>
+<td>column-reverse</td>
+<td>垂直方向，从下向上</td>
+</tr>
+</tbody></table>
+<h4 id="弹性伸缩比"><a href="#弹性伸缩比" class="headerlink" title="弹性伸缩比"></a>弹性伸缩比</h4><ul>
+<li>作用：控制弹性盒子的主轴方向的尺寸</li>
+<li>属性名：flex</li>
+<li>属性值：整数数字，表示占用父级元素剩余尺寸的份数</li>
+</ul>
+<h4 id="弹性盒子换行"><a href="#弹性盒子换行" class="headerlink" title="弹性盒子换行"></a>弹性盒子换行</h4><ul>
+<li>弹性盒子可以自动挤压或拉伸，默认情况下，所有弹性盒子都在一行显示</li>
+<li>属性名：flex-wrap</li>
+<li>属性值<ul>
+<li>wrap：换行</li>
+<li>nowrap：不换行（默认）</li>
+</ul>
+</li>
+</ul>
+<h4 id="行对齐方式"><a href="#行对齐方式" class="headerlink" title="行对齐方式"></a>行对齐方式</h4><ul>
+<li><p>属性名: align-content</p>
+</li>
+<li><p>属性值：</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flex-start</td>
+<td>默认值，弹性盒子从起点开始依次排列</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>弹性盒子从终点开始依次排列</td>
+</tr>
+<tr>
+<td>center</td>
+<td>弹性盒子沿主轴居中排列</td>
+</tr>
+<tr>
+<td>space-between</td>
+<td>弹性盒子沿主轴均匀排列，空白间距均匀分布在弹性盒子之间</td>
+</tr>
+<tr>
+<td>space-around</td>
+<td>弹性盒子沿主轴均匀排列，空白间距均匀分布在弹性盒子两侧</td>
+</tr>
+<tr>
+<td>space-evenly</td>
+<td>弹性盒子沿主轴均匀排列，弹性盒子与容器之间间距相等</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/02/14/%E6%B8%97%E9%80%8F/%E5%89%8D%E7%AB%AF/CSS%E5%AD%A6%E4%B9%A02/" data-id="cuidQwpNjDrTrqRkLSNWXG7BH" data-title="CSS学习2" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/02/14/%E6%B8%97%E9%80%8F/%E5%AE%9E%E6%93%8D/Hydra%20%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hydra密码爆破
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/02/14/%E6%B8%97%E9%80%8F/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS基础知识学习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="tag">SQL注入</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" rel="tag">暴力破解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%99%9A%E6%8B%9F%E5%B8%81/" rel="tag">虚拟币</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" style="font-size: 10px;">SQL注入</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px;">前端</a> <a href="/tags/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" style="font-size: 10px;">暴力破解</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E5%B8%81/" style="font-size: 10px;">虚拟币</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/02/">February 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/02/14/%E8%99%9A%E6%8B%9F%E5%B8%81/%E8%99%9A%E6%8B%9F%E5%B8%81%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%BA%AF%E6%BA%90/">虚拟币基础与溯源</a>
+          </li>
+        
+          <li>
+            <a href="/2026/02/14/%E6%B8%97%E9%80%8F/%E5%AE%9E%E6%93%8D/SQLMAP%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/">SQLMAP工具的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2026/02/14/%E6%B8%97%E9%80%8F/%E5%AE%9E%E6%93%8D/Hydra%20%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4/">Hydra密码爆破</a>
+          </li>
+        
+          <li>
+            <a href="/2026/02/14/%E6%B8%97%E9%80%8F/%E5%89%8D%E7%AB%AF/CSS%E5%AD%A6%E4%B9%A02/">CSS学习2</a>
+          </li>
+        
+          <li>
+            <a href="/2026/02/14/%E6%B8%97%E9%80%8F/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0/">CSS基础知识学习</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
